@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Reda benzakour" description="About Reda benzakour">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Découvrez mon parcours et mes compétences."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Reda Benzakour , developpeur junior"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						<a>Reda Benzakour</a> Après une formation initiale en informatique,
+						j'ai évolué au fil du temps des compétences à réaliser et à
+						résoudre des projets <a>full stack</a> ou à réparer des problèmes de code.
+					</p>
+					<br/>
+					<p>
+						À l'âge de 22 ans, je suis un <a>Développeur Junior</a> passionné par ce domaine
+						de programmation. Après deux ans d'expérience, j'ai dû réaliser <a>35 projets</a>
+						que ce soit pour moi, pour mes études ou pour mes clients.
+					</p>
+					<br/>
+					<p>
+						Ce qui me caractérise le plus, c'est ma capacité à m'adapter à de nouveaux
+						environnements et à apprendre de nouvelles choses et de <a>nouvelles technologies plus récentes</a>.
+						D'une nature ouverte, j'accorde une grande importance à la communication et au partage de connaissances.
+					</p>
+					
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p><a>Licence</a> en ingénierie informatique (EMSI), <a>DEC</a> en développement informatique</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Curieux, Créatif, Autonome, Organisé, Dynamique, Polyvalent, Travail en équipe</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
