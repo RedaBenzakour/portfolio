@@ -90,7 +90,7 @@ const projects = (await getCollection('work'))
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Node.js', 'Html/Css/js', 'Php', 'C/C++/C#', 'MySql/Oracle' ,'React/Astro','Java/Kotlin','Python'].map((brand) => (
+							['Node', 'Html/Css/js', 'Php/Php(POO)', 'C/C++/C#', 'MySql/Oracle/Mongo' ,'React/Astro','Java/Kotlin,Android','Python',''].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
@@ -99,6 +99,21 @@ const projects = (await getCollection('work'))
 					</Grid>
 				</div>
 				
+			</section>
+			<section class="section with-background bg-variant">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>compétences de plus</h3>
+					<p>
+						Passionné par l'intelligence artificielle, 
+						l'apprentissage automatique et la cybersécurité, 
+						j'ai développé plusieurs sites web innovants destinés à améliorer l'expérience utilisateur dans divers domaines,
+						tout en intégrant des pratiques de sécurité robustes.
+						Mes compétences en cybersécurité me permettent de concevoir des solutions fiables et protégées contre les menaces potentielles.
+						Bien que ces projets ne figurent pas sur mon portfolio ou mon GitHub,
+						je serais ravi de vous en parler davantage. Pour plus d'informations, 
+						vous pouvez me contacter par e-mail ou via LinkedIn<b/>
+					</p>
+			</header>
 			</section>
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
@@ -112,7 +127,7 @@ const projects = (await getCollection('work'))
 						alt="QrCode reda Benzakour"
 						width="240"
 						height="240"
-						src="/assets/QrCode.png"
+						src="/assets/Mon_code_QR_1-1024.jpeg"
 					/>
 				</div>
 					</p>
@@ -243,7 +258,7 @@ const projects = (await getCollection('work'))
 
 		.cta {
 			grid-area: cta;
-		}
+		
 	}
 	
 
